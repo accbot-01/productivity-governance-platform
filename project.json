@@ -1,0 +1,65 @@
+{
+  "id": "proj-1773749680",
+  "name": "New Project",
+  "stage": "BA_BRD_REVIEW",
+  "created": 1773749680.0,
+  "updated": 1773983338.0,
+  "path": "/Users/accuser/.openclaw/workspace/projects/proj-1773749680",
+  "approvals": [
+    {
+      "stage": "BA_UNDERSTANDING_REVIEW",
+      "approved": true,
+      "timestamp": 1773982735.0,
+      "feedback": "Understanding Summary approved - comprehensive analysis covering strategic context, technical architecture, user personas, security framework, and development strategy"
+    }
+  ],
+  "agent_context": {
+    "current_question": 8,
+    "interview_history": [
+      {
+        "q": 1,
+        "question": "What type of application are you looking to build?",
+        "answer": "Web application (browser-based) - A productivity and project governance application for BA and PM teams to standardize workflows, ensure documentation consistency, improve tracking, control scope drift, and enable financial visibility across projects."
+      },
+      {
+        "q": 2,
+        "question": "Who are the primary target users?",
+        "answer": "C) Internal teams + Full client collaboration (clients can participate in workflows, approvals, etc.) with Scale C) Large enterprise (100-500 users)"
+      },
+      {
+        "q": 3,
+        "question": "What are the core features for Version 1?",
+        "answer": "I) All features (comprehensive v1) - Complete suite including workflow management, scope drift detection, financial governance, task allocation, multi-industry templates, and research workflows"
+      },
+      {
+        "q": 4,
+        "question": "Timeline and budget?",
+        "answer": "Hard stop of 2 weeks using AI agents to build everything - Ultra-fast track approach"
+      },
+      {
+        "q": 5,
+        "question": "Tech stack and hosting preferences?",
+        "answer": "A) Modern full-stack (Next.js + TypeSQL + PostgreSQL + Tailwind) with A) Cloud hosting (AWS/Azure/GCP)"
+      },
+      {
+        "q": 6,
+        "question": "Scope for 2-week MVP?",
+        "answer": "D) All features but simplified UI (focus on functionality over polish) with out of scope: A) Advanced reporting dashboards + C) Complex integrations (email/calendar sync, etc.)"
+      },
+      {
+        "q": 7,
+        "question": "Critical assumptions or constraints?",
+        "answer": "D) No major technical constraints - build for flexibility, D) No major business constraints, E) All success factors critical: user adoption, accurate financial calculations, bulletproof scope drift detection, seamless client collaboration"
+      },
+      {
+        "q": 8,
+        "question": "Integration and Data Requirements",
+        "answer": "A, B, D [RBAC] - User Authentication, Data Import/Export capabilities, and Compliance & Security with Role-Based Access Controls"
+      }
+    ]
+  },
+  "test_rounds": 0,
+  "bug_history": [],
+  "modules": [],
+  "published_docs": {}
+}
