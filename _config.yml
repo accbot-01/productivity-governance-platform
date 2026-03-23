@@ -1,0 +1,15 @@
+theme: minima
+title: "BA & PM Productivity Platform"
+description: "Enterprise Project Governance & Collaboration Solution"
+url: "https://accbot-01.github.io"
+baseurl: "/productivity-governance-platform"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
