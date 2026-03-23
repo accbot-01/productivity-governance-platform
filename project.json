@@ -1,9 +1,9 @@
 {
   "id": "proj-1773749680",
   "name": "New Project",
-  "stage": "BA_FSD_REVIEW",
+  "stage": "ARCHITECT_SOW_REVIEW",
   "created": 1773749680.0,
-  "updated": 1774088522.0,
+  "updated": 1774252160.0,
   "path": "/Users/accuser/.openclaw/workspace/projects/proj-1773749680",
   "approvals": [
     {
@@ -17,6 +17,12 @@
       "approved": true,
       "timestamp": 1773984104.0,
       "feedback": "BRD approved - comprehensive requirements with 50+ specifications, 280% ROI projection, enterprise security compliance, and complete user story coverage"
+    },
+    {
+      "stage": "BA_FSD_REVIEW",
+      "approved": true,
+      "timestamp": 1774246740.0,
+      "feedback": "FSD approved - comprehensive 17K+ word functional specification with 8 core features, Given/When/Then acceptance criteria, multi-industry templates, and complete technical architecture requirements"
     }
   ],
   "agent_context": {
