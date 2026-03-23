@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement of Work (SOW) - BA & PM Platform Documentation</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: #2c5aa0;
+            font-weight: 600;
+        }
+
+        .breadcrumb {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Document Header */
+        .doc-header {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .doc-header h1 {
+            color: #2c5aa0;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .doc-subtitle {
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .doc-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .meta-item {
+            text-align: left;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: #495057;
+            display: block;
+        }
+
+        .meta-value {
+            color: #6c757d;
+        }
+
+        .status-review {
+            background: #fff3cd;
+            color: #856404;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Quick Stats */
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c5aa0;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Content */
+        .content {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .content h2 {
+            color: #2c5aa0;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 0.5rem;
+        }
+
+        .content h3 {
+            color: #495057;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .content h4 {
+            color: #495057;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        /* Module Grid */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .module-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .module-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .module-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .module-title {
+            color: #2c5aa0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .module-effort {
+            background: #2c5aa0;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+
+        .module-priority {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+        }
+
+        .priority-critical {
+            background: #dc3545;
+            color: white;
+        }
+
+        .priority-high {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .priority-medium {
+            background: #6f42c1;
+            color: white;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #fff;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #2c5aa0;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 1.35rem;
+            top: 1.2rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #dee2e6;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        /* Navigation */
+        .doc-nav {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #2c5aa0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .nav-button:hover {
+            background: #1e3d6f;
+        }
+
+        .nav-button.secondary {
+            background: #6c757d;
+        }
+
+        .nav-button.secondary:hover {
+            background: #545b62;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .highlight-box.warning {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+
+        .highlight-box.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .doc-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span style="font-size: 1.5rem;">🏗️</span>
+                <h1>Architecture Documentation</h1>
+            </div>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / Statement of Work
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Document Header -->
+        <section class="doc-header">
+            <h1>🏗️ Statement of Work (SOW)</h1>
+            <p class="doc-subtitle">Technical Module Breakdown & Delivery Timeline</p>
+            
+            <div class="doc-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Project</span>
+                    <span class="meta-value">BA & PM Productivity Platform</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">March 23, 2026</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Architect</span>
+                    <span class="meta-value">Marcus (Solution Architect)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="status-review">🔄 Ready for Review</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-number">280</div>
+                <div class="stat-label">Total Development Hours</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Core Modules</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Week Delivery Timeline</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Concurrent User Capacity</div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <article class="content">
+            <div class="highlight-box warning">
+                <h3>⏳ Status: Ready for Review</h3>
+                <p>This Statement of Work is complete and ready for stakeholder approval. Please review the module breakdown, effort estimates, and timeline before proceeding to the full architecture design phase.</p>
+            </div>
+
+            <h2>Executive Summary</h2>
+            <p>This Statement of Work defines the technical approach for delivering the BA & PM Productivity Platform as <strong>8 core modules</strong> plus infrastructure components. Total development effort is <strong>280 hours</strong> compressed into a <strong>2-week timeline</strong> using AI-powered development methodology.</p>
+
+            <h2>Core Module Breakdown</h2>
+            
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">🔐 Authentication & RBAC</div>
+                        <div class="module-effort">32h</div>
+                        <div class="module-priority priority-critical">Critical</div>
+                    </div>
+                    <p>JWT authentication, 10 user roles, MFA, SSO integration, session management with audit trails.</p>
+                    <strong>Dependencies:</strong> None (Foundation module)
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">📋 Project Workflow Engine</div>
+                        <div class="module-effort">45h</div>
+                        <div class="module-priority priority-critical">Critical</div>
+                    </div>
+                    <p>Configurable workflow state machine, 6 industry templates, automated transitions, approval gates.</p>
+                    <strong>Dependencies:</strong> Authentication System
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">🚨 AI Scope Drift Detection</div>
+                        <div class="module-effort">38h</div>
+                        <div class="module-priority priority-critical">Critical</div>
+                    </div>
+                    <p>ML-powered change detection, configurable thresholds, real-time impact analysis, automated alerts.</p>
+                    <strong>Dependencies:</strong> Workflow Engine
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">💰 Financial Governance</div>
+                        <div class="module-effort">42h</div>
+                        <div class="module-priority priority-critical">Critical</div>
+                    </div>
+                    <p>Real-time budget tracking, multi-currency support, ROI calculations, financial forecasting.</p>
+                    <strong>Dependencies:</strong> Workflow Engine, Scope Detection
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">🤝 Client Collaboration Portal</div>
+                        <div class="module-effort">35h</div>
+                        <div class="module-priority priority-high">High</div>
+                    </div>
+                    <p>White-label client portal, document sharing, approval workflows, secure messaging.</p>
+                    <strong>Dependencies:</strong> Authentication, Workflow Engine
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">👥 Resource Management</div>
+                        <div class="module-effort">28h</div>
+                        <div class="module-priority priority-high">High</div>
+                    </div>
+                    <p>Skills-based allocation, capacity planning, workload balancing, performance tracking.</p>
+                    <strong>Dependencies:</strong> Authentication, Workflow Engine
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">🏭 Multi-Industry Templates</div>
+                        <div class="module-effort">25h</div>
+                        <div class="module-priority priority-medium">Medium</div>
+                    </div>
+                    <p>6 industry templates (Healthcare, Finance, Manufacturing, Tech, Government, Education).</p>
+                    <strong>Dependencies:</strong> Workflow Engine
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">📚 Knowledge Management</div>
+                        <div class="module-effort">30h</div>
+                        <div class="module-priority priority-medium">Medium</div>
+                    </div>
+                    <p>AI-powered document categorization, semantic search, research workflows, lessons learned.</p>
+                    <strong>Dependencies:</strong> Authentication System
+                </div>
+            </div>
+
+            <h2>Development Timeline</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Week 1: Foundation & Core Systems</h3>
+                    <strong>Days 1-3:</strong> Infrastructure setup, database design, authentication system, security framework<br>
+                    <strong>Days 4-7:</strong> Workflow engine, scope drift detection, basic client portal
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Week 2: Advanced Features & Integration</h3>
+                    <strong>Days 8-10:</strong> Financial governance, resource management, template system<br>
+                    <strong>Days 11-14:</strong> Knowledge management, final integration, testing, documentation
+                </div>
+            </div>
+
+            <h2>Technology Stack</h2>
+            
+            <table>
+                <tr><th>Component</th><th>Technology</th><th>Version</th></tr>
+                <tr><td>Frontend</td><td>Next.js with TypeScript</td><td>14+</td></tr>
+                <tr><td>Backend</td><td>Node.js with Express</td><td>20+</td></tr>
+                <tr><td>Database</td><td>PostgreSQL</td><td>15+</td></tr>
+                <tr><td>ORM</td><td>Sequelize</td><td>6+</td></tr>
+                <tr><td>Caching</td><td>Redis</td><td>7+</td></tr>
+                <tr><td>Search</td><td>ElasticSearch</td><td>8+</td></tr>
+                <tr><td>Monitoring</td><td>Prometheus + Grafana</td><td>Latest</td></tr>
+            </table>
+
+            <h2>Resource Allocation</h2>
+            
+            <div class="highlight-box">
+                <h3>Development Team Structure</h3>
+                <ul>
+                    <li><strong>Primary Development Agent:</strong> 200 hours (full-stack development)</li>
+                    <li><strong>Database Specialist Agent:</strong> 40 hours (schema design and optimization)</li>
+                    <li><strong>Security Specialist Agent:</strong> 40 hours (security implementation)</li>
+                    <li><strong>Solution Architect (Marcus):</strong> 20 hours (oversight and decisions)</li>
+                    <li><strong>Quality Assurance (Nadia):</strong> 40 hours (testing and validation)</li>
+                </ul>
+            </div>
+
+            <h2>Risk Assessment</h2>
+            
+            <h3>High-Risk Areas & Mitigation</h3>
+            <table>
+                <tr><th>Risk</th><th>Impact</th><th>Mitigation Strategy</th></tr>
+                <tr><td>AI Algorithm Complexity</td><td>High</td><td>Start with rule-based system, enhance with ML incrementally</td></tr>
+                <tr><td>Performance at 500+ Users</td><td>High</td><td>Database optimization, caching, comprehensive load testing</td></tr>
+                <tr><td>SOC 2 Compliance</td><td>Medium</td><td>Security-first development, regular audits, expert review</td></tr>
+                <tr><td>Integration Complexity</td><td>Medium</td><td>Well-defined API contracts, comprehensive testing</td></tr>
+            </table>
+
+            <h2>Success Metrics</h2>
+            
+            <div class="highlight-box success">
+                <h3>🎯 Key Performance Indicators</h3>
+                <ul>
+                    <li><strong>Performance:</strong> Sub-2 second page loads (95th percentile)</li>
+                    <li><strong>Scalability:</strong> 500+ concurrent users without degradation</li>
+                    <li><strong>Availability:</strong> 99.9% uptime requirement</li>
+                    <li><strong>Security:</strong> Zero critical vulnerabilities in security scan</li>
+                    <li><strong>User Adoption:</strong> 90%+ of target users actively using within 30 days</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box success" style="margin-top: 2rem;">
+                <h3>✅ SOW Complete - Ready for Approval</h3>
+                <p><strong>Next Steps:</strong> Upon approval, proceed to complete architecture design phase with 6 detailed technical documents:<br>
+                • Tech Stack Justification<br>
+                • System Architecture Design<br>
+                • Database Schema & Models<br>
+                • Complete API Specification<br>
+                • Security Architecture<br>
+                • Developer Handoff Documentation</p>
+            </div>
+        </article>
+
+        <!-- Navigation -->
+        <nav class="doc-nav">
+            <a href="fsd.html" class="nav-button secondary">
+                ← Back: Functional Specification
+            </a>
+            <div style="text-align: center; color: #6c757d;">
+                <strong>⏳ Awaiting Approval</strong><br>
+                <small>Use /approve or /reject to proceed</small>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
